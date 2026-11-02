@@ -1,0 +1,1743 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dalawish Jjunju | IT Professional Portfolio</title>
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #101820;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: #35c759;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            background: #101820;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        .navbar {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #1f7e02;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #35c759;
+        }
+
+        .menu-btn {
+            display: none;
+            color: white;
+            font-size: 27px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 50vh;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(16,24,32,0.96),
+                    rgba(29,77,50,0.92)
+                );
+            color: white;
+            display: flex;
+            align-items: center;
+            background-image: url(Images/banner7.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h4 {
+            color: #02710e;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: #025b18;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 20px;
+            color: #01570a;
+        }
+
+        .hero-text p {
+            color: #258913;
+            font-size:20px ;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 23px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: #18be02;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #04ab09;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid #04ab07;
+            color: white;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #0dc503;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+    .about-image {
+        width: 350px;
+        height:350px;
+        border-radius: 50%;
+        margin: auto auto 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #03b748;
+        border: 10px solid #12fb50;
+            
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            color: #101820;
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .personal-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 13px;
+            border-radius: 7px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .info-item strong {
+            color: #101820;
+        }
+
+        .info-item span {
+            color: #666;
+        }
+        /* ====== SERVICE ====== */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 13px;
+            text-align: center;
+            box-shadow: 0 5px 18px rgb(167, 239, 59);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #101820;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+        /* ========  SKILLS ======== */
+
+        .skills-section {
+            background: #101820;
+            color: white;
+        }
+
+        .skills-section .section-title h2 {
+            color: white;
+        }
+
+        .skills-section .section-title p {
+            color: #bbbbbb;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 50px;
+        }
+
+        .skill {
+            margin-bottom: 20px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .skill-header span:last-child {
+            color: #39d21e;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 10px;
+            background: #26313a;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            width: 0;
+            background: #35c759;
+            border-radius: 20px;
+            transition: width 1.5s ease;
+        }
+        /* ============ PROJECTS ========== */
+
+        .projects {
+            background: #f5f7fb;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(103, 248, 7, 0.897);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-image {
+            height: 190px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .project-content {
+            padding: 22px;
+        }
+
+        .project-content h3 {
+            color: #101820;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #e5f8eb;
+            color: #218838;
+            padding: 5px 9px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        /* ========== EDUCATION ========== */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: #35c759;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+            padding-left: 60px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 23px;
+            height: 23px;
+            border-radius: 50%;
+            background: #35c759;
+            border: 5px solid #f5f7fb;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .timeline-content h3 {
+            color: #101820;
+        }
+
+        .timeline-content .year {
+            color: #35c759;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .timeline-content p {
+            color: #666;
+            margin-top: 7px;
+        }
+        /*======= STATISTICS =========== */
+
+        .stats {
+            background: #101820;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .stat-box {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-box h2 {
+            color: #35c759;
+            font-size: 40px;
+            margin-bottom: 5px;
+        }
+
+        .stat-box p {
+            color: #bbb;
+        }
+
+        /* ========= CONTACT ========== */
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: #101820;
+            color: white;
+            padding: 35px;
+            border-radius: 14px;
+        }
+
+        .contact-info h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #bbb;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            color: #35c759;
+            font-size: 20px;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 3px;
+        }
+
+        .contact-item p {
+            margin: 0;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+.live-dot {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background: #09b70c;
+            border-radius: 60%;
+            margin-right: 10px;
+            animation: blink 1s infinite;
+        }
+         @keyframes blink {
+            50% {
+                opacity: 0.2;
+            }
+        }
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #35c759;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+        /* =========== FOOTER ========== */
+
+        footer {
+            background: #101820;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer strong {
+            color: #35c759;
+        }
+        /* ============= BACK TO TOP =========== */
+
+        #topBtn {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #35c759;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+            font-size: 20px;
+            z-index: 999;
+        }
+        /* =========== RESPONSIVE DESIGN ============ */
+
+        @media(max-width: 1000px) {
+
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .services-grid,
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #101820;
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+        }
+
+        @media(max-width: 650px) {
+
+            section {
+                padding: 60px 0;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-text h2 {
+                font-size: 20px;
+            }
+
+            .profile-circle {
+                width: 250px;
+                height: 250px;
+                font-size: 70px;
+            }
+
+            .services-grid,
+            .project-grid,
+            .skills-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .personal-info {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!--=========== NAVIGATION =========== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <div class="logo">
+            DALAWISH<span>.</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            
+        </div>
+
+    </div>
+
+</header>
+
+<!-- =========== HERO =========== -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <h4>Hello, This is</h4>
+
+            <h1>
+                Dalawish <span>Jjunju</span>
+            </h1>
+
+            <h2>
+                A Student of Information Technology & Web Development
+                <p> @ Globa institute of Information Technology-Makerere</p>
+            </h2>
+
+            <p>
+                I am an IT professional and web developer passionate about
+                designing modern websites, developing management systems,
+                solving technology problems and creating digital solutions
+                that make organizations more efficient.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============= ABOUT ========= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About <span>Me</span></h2>
+
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-image">
+                <img  width="400" src="Images/Dalawish.png" alt="Dalawish ">
+            </div>
+
+            <div class="about-text">
+
+                <h3>
+                    Building Digital Solutions Through Technology
+                </h3>
+
+                <p>
+                    My name is <strong>Dalawish Jjunju</strong>. I am an
+                    Information Technology student with a strong interest
+                    in web development, software development, networking,
+                    computer maintenance and information systems.
+                </p>
+
+                <p>
+                    I enjoy transforming ideas and organizational
+                    requirements into practical digital systems that are
+                    easy to use, responsive and efficient.
+                </p>
+
+                <p>
+                    My goal is to continue developing my technical skills
+                    and become a professional technology specialist capable
+                    of creating innovative solutions for businesses,
+                    schools and other organizations.
+                </p>
+
+
+                <div class="personal-info">
+
+                    <div class="info-item">
+                        <strong>Name:</strong>
+                        <span>Dalawish Jjunju</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Profession:</strong>
+                        <span>IT / Web Developer</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Specialization:</strong>
+                        <span>Web Development</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Interest:</strong>
+                        <span>Technology & Innovation</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============= SERVICES ======== -->
+
+<section id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Services</span></h2>
+
+            <p>
+                Technology services and digital solutions I can provide.
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                     <img  width="100" src="Images/web.png" alt="website ">
+                </div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Development of responsive and modern websites using
+                    HTML, CSS and JavaScript.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                     <img  width="100" src="Images/system.jfif" alt="system ">
+                </div>
+
+                <h3>System Development</h3>
+
+                <p>
+                    Design and development of customized information
+                    management systems for organizations.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <img  width="100" src="Images/ComputerRep.png" alt="computer ">
+                </div>
+
+                <h3>Computer Maintenance</h3>
+
+                <p>
+                    Computer troubleshooting, maintenance, software
+                    installation and technical support.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                     <img  width="100" src="Images/networking.jpg" alt="networking ">
+                </div>
+
+                <h3>Networking</h3>
+
+                <p>
+                    Basic network installation, configuration,
+                    troubleshooting and connectivity support.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                     <img  width="100" src="Images/userinter.png" alt="interface ">
+                </div>
+
+                <h3>User-friendly interface</h3>
+
+                <p>
+                    Creation of clean, user-friendly and responsive
+                    interfaces for websites and applications.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                     <img  width="100" src="Images/tec2.webp" alt="Tech ">
+                </div>
+
+                <h3>Technical Support</h3>
+
+                <p>
+                    Technical assistance and problem solving for common
+                    computer and software challenges.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============= SKILLS ============ -->
+
+<section class="skills-section" id="skills">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Skills</span></h2>
+
+            <p>
+                Some of the technical skills I am developing and applying.
+            </p>
+
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="90%"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>CSS</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="85%"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>JavaScript</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="75%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>C++</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="70%"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>Computer Networking</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="80%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>Computer Maintenance</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-width="85%"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =============  PROJECTS ======== -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My <span>Projects</span></h2>
+
+        </div>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+
+                <div class="project-image">
+                   <img  width="300" src="Images/Clinic Management System.png" alt="Clinic ">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Clinic Management System
+                    </h3>
+
+                    <p>
+                        A web-based system for managing patients,
+                        appointments, medical records, pharmacy,
+                        laboratory and billing.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                   <img  width="400" src="Images/School Management System.jpg" alt="School ">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        School Management System
+                    </h3>
+
+                    <p>
+                        A school system for student management,
+                        attendance, fees, examinations, courses,
+                        library and administration.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img  width="400" src="Images/SPORTS Management System.png" alt="sports ">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                       Kampala Sports Management System
+                    </h3>
+
+                    <p>
+                        A sports management platform for managing
+                        teams, players, fixtures, results, payments
+                        and sports activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">
+                <img  width="400" src="Images/food.webp" alt="Food ">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Basharat Fresh Produce
+                    </h3>
+
+                    <p>
+                        A business website and management platform
+                        for products, orders, stock, farmers,
+                        deliveries and payments.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img  width="400" src="Images/SACCO Management System.jpg" alt="SACCO ">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        SACCO Management System
+                    </h3>
+
+                    <p>
+                        A management system for members, savings,
+                        loans, transactions, investments and
+                        financial records.
+                    </p>
+
+
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">
+                     <img  width="400" src="Images/VOTING.jpg" alt="voting ">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Voting System
+                    </h3>
+
+                    <p>
+                        Voting system that t gives you the choice to vote 
+                        for your local and national representatives through elctronically.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============ EDUCATION ======= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Education & <span>Experience</span></h2>
+
+            <p>
+                My academic and practical technology journey.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="year">
+                        Diploma Programme
+                    </span>
+
+                    <h3>
+                        Diploma in Information Technology
+                    </h3>
+
+                    <p>
+                        Studying Information Technology (IT) @ Global institute of 
+                        Information Technology-Makerere.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="year">
+                        Web Development
+                    </span>
+
+                    <h3>
+                        Website & System Development
+                    </h3>
+
+                    <p>
+                        Developing responsive websites and management
+                        systems using HTML, CSS and JavaScript.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="year">
+                        IT Support
+                    </span>
+
+                    <h3>
+                        Computer Maintenance & Networking
+                    </h3>
+
+                    <p>
+                        Practical experience in computer repair,
+                        maintenance, troubleshooting and networking.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============  CONTACT =========== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact <span>Me</span></h2>
+
+            <p>
+                Let's connect.
+            </p>
+
+        </div>
+
+        <div class="contact-content">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Let's Work Together
+                </h3>
+
+                <p>
+                    I am open to discussing website development,
+                    information systems, technical support and
+                    other IT projects.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                       <img  width="40" src="Images/email.png" alt="Email ">
+                    </div>
+
+                    <div>
+                        <h4>Email</h4>
+                        <p>dalawishj@gmail.com</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                       <img  width="40" src="Images/phone.png" alt="Phone ">
+                    </div>
+
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+256 703 620 902</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    
+                       <div class="live-indicator">
+            <span class="live-dot"></span>
+  
+                    </div>
+
+                    <div>
+                        <h4>Location</h4>
+                        <p>Uganda</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-form">
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+
+                        <label>Your Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>Subject</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Enter subject"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Message</label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========= FOOTER ======= -->
+
+<footer>
+
+    <p>
+        @ 2026 <strong>Dalawish Jjunju</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Smart IT solutions for real problems
+    </p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="topBtn" onclick="scrollToTop()">
+    
+</button>
+
+
+<!-- ========  JAVASCRIPT ====== -->
+
+<script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList.toggle("show");
+
+    }
+
+    /* CLOSE MENU AFTER CLICKING LINK */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("show");
+
+            });
+
+        });
+
+    /* ACTIVE NAVIGATION */
+
+    const sections =
+        document.querySelectorAll("section");
+
+    const navLinks =
+        document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 100;
+
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (
+                link.getAttribute("href") ===
+                "#" + current
+            ) {
+                link.classList.add("active");
+            }
+
+        });
+
+    });
+
+    /* SKILL BAR ANIMATION */
+
+    const skillBars =
+        document.querySelectorAll(".skill-progress");
+
+    const skillObserver =
+        new IntersectionObserver(entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    const width =
+                        entry.target.dataset.width;
+
+                    entry.target.style.width = width;
+
+                }
+
+            });
+
+        }, {
+            threshold: 0.4
+        });
+
+
+    skillBars.forEach(bar => {
+        skillObserver.observe(bar);
+    });
+
+    /* COUNTER ANIMATION */
+
+    const counters =
+        document.querySelectorAll(".counter");
+
+    let counterStarted = false;
+
+    function startCounters() {
+
+        if (counterStarted) return;
+
+        const statsSection =
+            document.querySelector(".stats");
+
+        const position =
+            statsSection.getBoundingClientRect().top;
+
+        if (position < window.innerHeight) {
+
+            counterStarted = true;
+
+            counters.forEach(counter => {
+
+                const target =
+                    Number(counter.dataset.target);
+
+                let current = 0;
+
+                const increment =
+                    Math.ceil(target / 60);
+
+                const updateCounter = () => {
+
+                    current += increment;
+
+                    if (current >= target) {
+                        current = target;
+                    }
+
+                    counter.textContent = current;
+
+                    if (current < target) {
+                        requestAnimationFrame(updateCounter);
+                    }
+
+                };
+
+                updateCounter();
+
+            });
+
+        }
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        startCounters
+    );
+
+    startCounters();
+
+    /* CONTACT FORM */
+
+    document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const message =
+                document.getElementById("message").value.trim();
+
+            if (!name || !email || !message) {
+
+                alert(
+                    "Please complete all required fields."
+                );
+
+                return;
+            }
+
+            alert(
+                "Thank you, " +
+                name +
+                "! Your message has been received."
+            );
+
+            this.reset();
+
+        });
+
+    /* BACK TO TOP BUTTON */
+
+    const topBtn =
+        document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 500) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+
+    });
+
+    function scrollToTop() {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
+
